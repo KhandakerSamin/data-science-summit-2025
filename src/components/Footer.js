@@ -3,7 +3,7 @@ export default function Footer() {
 
   return (
     <footer className="w-full  border-opacity-10 bg-black/50">
-      <div className="max-w-7xl mx-auto px-4 md:px-8 py-5">
+      <div className="w-full mx-auto px-4 md:px-38 py-5">
         {/* Main Content */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-8">
           {/* Left Section - Copyright */}
