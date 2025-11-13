@@ -1,28 +1,26 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Load Poppins font
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"], // Regular, Medium, SemiBold, Bold
 });
 
 export const metadata = {
   title: "5th Data Science Summit 2025",
-  description: "Join us for the 5th Data Science Summit 2025 at Daffodil Smart City, Birulai, Savar, Dhaka. Explore the latest in AI and data science with industry experts and enthusiasts.",
+  description:
+    "Join us for the 5th Data Science Summit 2025 at Daffodil Smart City, Birulai, Savar, Dhaka. Explore the latest in AI and data science with industry experts and enthusiasts.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen  w-full bg-[#020617] relative`}
+        className={`${poppins.variable} antialiased min-h-screen w-full bg-[#020617] relative`}
         style={{
           background: "#020617",
           backgroundImage: `
@@ -41,5 +39,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
-

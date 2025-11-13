@@ -76,7 +76,7 @@ export default function Navbar() {
                                         <a
                                              href={link.href}
                                              onClick={(e) => handleSmoothScroll(e, link)}
-                                             className="text-gray-100 text-base font-medium hover:text-cyan-400 transition-all duration-300 relative group cursor-pointer"
+                                             className="text-gray-100 text-base font-medium hover:text-cyan-400 hover:pb-1 transition-all duration-300 relative group cursor-pointer"
                                         >
                                              {link.label}
                                              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-linear-to-r from-cyan-400 to-blue-400 group-hover:w-full transition-all duration-300"></span>
