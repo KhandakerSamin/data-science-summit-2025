@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 const TimeBox = ({ value, label }) => (
@@ -59,7 +60,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="w-full flex items-center justify-center px-2 sm:px-3 md:px-4 py-8 md:py-12 relative z-10" style={{ minHeight: 'calc(100vh - 100px)' }}>
+    <section className="w-full flex items-center justify-center px-2 sm:px-3 md:px-4 py-8 md:py-12 md:pt-35 relative z-10" style={{ minHeight: 'calc(100vh )' }}>
       <div className="w-full max-w-5xl text-center">
         {/* Main Heading */}
         <div className="mb-6 md:mb-8">
@@ -107,9 +108,11 @@ export default function Hero() {
 
         {/* Call to Action Button */}
         <div className="mt-8 md:mt-10">
+          <Link href="#events">
           <button className="bg-linear-to-r from-cyan-400 to-blue-500 text-white px-6 md:px-10 py-3 md:py-4 font-bold text-base md:text-lg rounded-lg hover:from-cyan-300 hover:to-blue-400 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-xl">
             Register Now
           </button>
+          </Link>
         </div>
       </div>
     </section>
