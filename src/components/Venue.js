@@ -37,9 +37,9 @@ export default function VenueSection() {
 
                          {/* Right Side - Event Details */}
                          <div className="space-y-6">
-                              <div className='flex justify-between items-center gap-5'>
+                              <div className='flex flex-col md:flex-row justify-between items-center gap-5'>
                                    {/* Date Card */}
-                                   <div className=" bg rounded-2xl p-1 min-h-44 w-5/6 bg-linear-to-br from-slate-800/40 to-slate-900/40 backdrop-blur-xl border border-cyan-500/20">
+                                   <div className=" bg rounded-2xl p-1 w-full  md:min-h-44 md:w-5/6 bg-linear-to-br from-slate-800/40 to-slate-900/40 backdrop-blur-xl border border-cyan-500/20">
                                         <div className=" rounded-xl p-6">
                                              <div className="flex items-start gap-4">
                                                   <div className="shrink-0">
