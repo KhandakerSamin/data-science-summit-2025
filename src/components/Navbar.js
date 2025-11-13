@@ -17,7 +17,8 @@ export default function Navbar() {
 
      const navLinks = [
           { label: 'About', href: '#about' },
-          { label: 'Events & Schedule', href: '#events' },
+          { label: 'Events', href: '#events' },
+          { label: 'Schedule', href: '#schedule'},
           { label: 'Previous Summits', href: '#previous' },
           { label: 'Results', href: '#results' },
      ];
@@ -38,7 +39,7 @@ export default function Navbar() {
                     {/* Logo Section */}
                     <div className="">
                          <Link href="/">
-                              <Image src='/logo.svg' alt='Logo' width={150} height={100} />
+                              <Image src='/logo.png' alt='Logo' width={150} height={100} />
                          </Link>
                     </div>
 
