@@ -33,18 +33,25 @@ export default function Navbar() {
      };
 
      return (
-          <nav className='px-25 py-5 bg-black/35'
-          >
-               <div className="flex justify-between items-center">
+          <nav className='px-4 md:px-8 py-4 bg-black/35 z-50'>
+               <div className="flex justify-between items-center max-w-7xl mx-auto">
                     {/* Logo Section */}
-                    <div className="">
+                    <div className="shrink-0">
                          <Link href="/">
-                              <Image src='/logo.png' alt='Logo' width={150} height={100} />
+                              <div className="w-32 md:w-40 h-auto">
+                                   <Image 
+                                        src='/logo.png' 
+                                        alt='Logo' 
+                                        width={150} 
+                                        height={100}
+                                        priority
+                                   />
+                              </div>
                          </Link>
                     </div>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden md:flex items-center gap-8">
+                    <div className="hidden md:flex items-center gap-2 flex-1 justify-center">
                          <ul className="flex list-none gap-8 m-0 p-0">
                               {navLinks.map((link) => (
                                    <li key={link.label}>
@@ -60,8 +67,10 @@ export default function Navbar() {
                               ))}
                          </ul>
                     </div>
-                    <div>
-                         <button className="bg-linear-to-r from-cyan-500 to-blue-900 text-white px-6 py-3 font-semibold rounded-md hover:from-cyan-300 hover:to-blue-400 transition-all duration-300 hover:-translate-y-0.5 shadow-md hover:shadow-lg">
+
+                    {/* Desktop Register Button */}
+                    <div className="hidden md:flex ml-auto">
+                         <button className="bg-linear-to-r from-cyan-500 to-blue-900 text-white px-8 py-3 font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-800 transition-all duration-300 hover:-translate-y-0.5 shadow-lg hover:shadow-xl">
                               Register Now
                          </button>
                     </div>
@@ -72,16 +81,13 @@ export default function Navbar() {
                          onClick={toggleMenu}
                     >
                          <span
-                              className={`w-7 h-0.5 bg-white rounded transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-2.5' : ''
-                                   }`}
+                              className={`w-6 h-0.5 bg-white rounded-full transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-2 origin-center' : ''}`}
                          ></span>
                          <span
-                              className={`w-7 h-0.5 bg-white rounded transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''
-                                   }`}
+                              className={`w-6 h-0.5 bg-white rounded-full transition-all duration-300 ${isMenuOpen ? 'opacity-0 scale-0' : ''}`}
                          ></span>
                          <span
-                              className={`w-7 h-0.5 bg-white rounded transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-2.5' : ''
-                                   }`}
+                              className={`w-6 h-0.5 bg-white rounded-full transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-2 origin-center' : ''}`}
                          ></span>
                     </div>
                </div>
@@ -89,32 +95,36 @@ export default function Navbar() {
                {/* Mobile Modal Menu */}
                {isMenuOpen && (
                     <>
-                         <div className="fixed inset-0 bg-black bg-opacity-50 z-40" onClick={closeMenu}></div>
-                         <div className="fixed top-20 left-0 right-0 bg-black bg-opacity-90 backdrop-blur-md flex flex-col p-6 gap-6 shadow-lg z-45 border-b border-purple-500 border-opacity-30"
-                              style={{
-                                   background: "linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(59, 130, 246, 0.05) 100%)",
-                                   backdropFilter: "blur(10px)"
-                              }}
+                         <div 
+                              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40" 
+                              onClick={closeMenu}
+                         ></div>
+                         <div 
+                              className="fixed top-20 left-4 right-4 bg-linear-to-b from-slate-950 via-slate-900 to-blue-950/20 rounded-2xl shadow-2xl z-50 border border-cyan-500/20 overflow-hidden"
                          >
-                              <ul className="flex flex-col list-none gap-6 m-0 p-0">
-                                   {navLinks.map((link) => (
-                                        <li key={link.label}>
-                                             <a
-                                                  href={link.href}
-                                                  onClick={(e) => handleSmoothScroll(e, link.href)}
-                                                  className="text-gray-100 text-lg font-medium hover:text-cyan-400 transition-all duration-300 pb-3 border-b border-white border-opacity-10 block cursor-pointer"
-                                             >
-                                                  {link.label}
-                                             </a>
-                                        </li>
-                                   ))}
-                              </ul>
-                              <button
-                                   className="bg-linear-to-r from-cyan-400 to-blue-500 text-black px-6 py-3 font-semibold rounded-md hover:from-cyan-300 hover:to-blue-400 transition-all duration-300 hover:-translate-y-0.5 w-full"
-                                   onClick={closeMenu}
-                              >
-                                   Register Now
-                              </button>
+                              <div className="p-6">
+                                   <ul className="flex flex-col list-none gap-1 m-0 p-0">
+                                        {navLinks.map((link) => (
+                                             <li key={link.label}>
+                                                  <a
+                                                       href={link.href}
+                                                       onClick={(e) => handleSmoothScroll(e, link.href)}
+                                                       className="text-gray-100 text-base font-medium hover:text-cyan-300 transition-all duration-300 px-4 py-3 block rounded-lg hover:bg-cyan-500/10 border-l-2 border-transparent hover:border-cyan-400"
+                                                  >
+                                                       {link.label}
+                                                  </a>
+                                             </li>
+                                        ))}
+                                   </ul>
+                                   <div className="mt-6 pt-6 border-t border-white/10">
+                                        <button
+                                             className="w-full bg-linear-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 hover:-translate-y-0.5 shadow-lg"
+                                             onClick={closeMenu}
+                                        >
+                                             Register Now
+                                        </button>
+                                   </div>
+                              </div>
                          </div>
                     </>
                )}

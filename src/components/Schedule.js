@@ -7,7 +7,7 @@ export default function ScheduleSection() {
       title: 'Data Hackathon',
       description: 'Join us for a weekend of coding, innovation, and collaboration to solve real-world problems.',
       time: '09:00 AM - 05:00 PM',
-      date: 'December 11, 2024',
+      date: 'December 11, 2025',
       location: 'Daffodil Smart City, Birulia, Dhaka-1216',
     },
     {
@@ -15,7 +15,7 @@ export default function ScheduleSection() {
       title: 'Project Competition',
       description: 'Showcase your projects and compete for prizes with the best teams in the university.',
       time: '09:00 AM - 05:00 PM',
-      date: 'December 11, 2024',
+      date: 'December 11, 2025',
       location: 'Daffodil Smart City, Birulia, Dhaka-1216',
     },
     {
@@ -23,7 +23,7 @@ export default function ScheduleSection() {
       title: 'Promptcraft Challenge',
       description: 'Test your creativity and skill in this exciting prompt-based challenge.',
       time: '09:00 AM - 05:00 PM',
-      date: 'December 11, 2024',
+      date: 'December 11, 2025',
       location: 'Daffodil Smart City, Birulia, Dhaka-1216',
     },
     {
@@ -31,7 +31,7 @@ export default function ScheduleSection() {
       title: 'Hands-On Workshop',
       description: 'Participate in hands-on workshops covering various topics in technology and innovation.',
       time: '09:00 AM - 05:00 PM',
-      date: 'December 11, 2024',
+      date: 'December 11, 2025',
       location: 'Daffodil Smart City, Birulia, Dhaka-1216',
     },
     {
@@ -39,7 +39,7 @@ export default function ScheduleSection() {
       title: 'Idea Poster Presentation',
       description: 'Showcase your research through engaging posters and get feedback from peers and mentors.',
       time: '09:00 AM - 05:00 PM',
-      date: 'December 11, 2024',
+      date: 'December 11, 2025',
       location: 'Daffodil Smart City, Birulia, Dhaka-1216',
     },
   ];
@@ -112,7 +112,7 @@ export default function ScheduleSection() {
         {/* Mobile Timeline Indicator */}
         <div className="lg:hidden mt-12 p-6 rounded-lg border border-cyan-500/30 bg-cyan-500/5 backdrop-blur-sm text-center">
           <p className="text-cyan-300 font-medium text-sm md:text-base">
-            ✨ All events happening on <span className="text-cyan-400 font-semibold">December 11, 2024</span>
+            ✨ All events happening on <span className="text-cyan-400 font-semibold">December 11, 2025</span>
           </p>
         </div>
       </div>
