@@ -261,8 +261,8 @@ export default function EventsSection() {
 
       {/* Modal */}
       {selectedEvent && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
-          <div className="relative w-full max-w-2xl max-h-[90vh] bg-linear-to-br from-slate-800 to-slate-900 rounded-2xl border border-cyan-500/30 overflow-y-auto shadow-2xl shadow-cyan-500/20">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm ">
+          <div className="relative w-full max-w-2xl max-h-[90vh] bg-linear-to-br from-slate-800 to-slate-900 rounded-lg  border border-cyan-500/30 shadow-2xl shadow-cyan-500/20 overflow-y-scroll no-scrollbar">
             {/* Close Button */}
             <button
               onClick={() => setSelectedEvent(null)}
