@@ -67,8 +67,8 @@ export default function Hero() {
           <h3 className="text-sm md:text-2xl text-cyan-300 font-bold mb-2 md:mb-3 tracking-wider uppercase opacity-90">
             AI in Entrepreneurship
           </h3>
-          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold text-white mb-2 md:mb-4 leading-tight">
-            5th Data Science Summit
+          <h1 className="text-4xl py-3 md:py-0 md:text-5xl lg:text-7xl font-bold text-white mb-2 md:mb-4 leading-tight">
+            5th<br className='block md:hidden'/> Data Science <br className='block md:hidden'/> Summit
           </h1>
           <p className="text-base md:text-lg text-gray-300 font-semibold mt-3 md:mt-4">
             Get Ready to Show Your Data Skills
@@ -98,7 +98,7 @@ export default function Hero() {
           </p>
 
           {/* Countdown Timer */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
+          <div className="w-1/2 md:w-full mx-auto grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
             <TimeBox value={timeLeft.days} label="Days" />
             <TimeBox value={timeLeft.hours} label="Hours" />
             <TimeBox value={timeLeft.minutes} label="Minutes" />
