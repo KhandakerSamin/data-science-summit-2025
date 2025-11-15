@@ -18,7 +18,7 @@ export default function PreviousSummitsSection() {
             id: 1,
             title: '1st Data Summit',
             year: 2020,
-            date: '22nd November',
+            date: '11th December',
             description: 'The inaugural Data Science Summit marked the beginning of our journey, bringing together pioneers in the field.',
             stats: { participants: '50+', speakers: '8', sessions: '4' },
             images: ['p1.webp', 'p2.webp', 'p3.webp']
@@ -27,7 +27,7 @@ export default function PreviousSummitsSection() {
             id: 2,
             title: '2nd Data Summit',
             year: 2021,
-            date: '15th December',
+            date: '11th December',
             description: 'Expanded reach with industry leaders and hands-on workshops for practical learning.',
             stats: { participants: '150+', speakers: '15', sessions: '8' },
             images: ['p4.webp', 'p5.webp', 'p6.webp']
@@ -36,7 +36,7 @@ export default function PreviousSummitsSection() {
             id: 3,
             title: '3rd Data Summit',
             year: 2022,
-            date: '18th November',
+            date: '11th December',
             description: 'Brought international perspectives with renowned speakers and enhanced networking opportunities.',
             stats: { participants: '300+', speakers: '25', sessions: '12' },
             images: ['p7.webp', 'p8.webp', 'p9.webp']
@@ -45,10 +45,10 @@ export default function PreviousSummitsSection() {
             id: 4,
             title: '4th Data Summit',
             year: 2023,
-            date: '20th November',
+            date: '11th December',
             description: 'Successfully transitioned to hybrid model, reaching a global audience with cutting-edge data science topics.',
             stats: { participants: '500+', speakers: '35', sessions: '16' },
-            images: ['p10.jpg', 'p11.jpg', 'p12.jpg']
+            images: ['P10.jpg', 'P11.jpg', 'P12.jpg']
         },
     ];
 
