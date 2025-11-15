@@ -45,9 +45,10 @@ export default function ScheduleSection() {
   ];
 
   return (
+    // bg-linear-to-b from-slate-900 via-slate-950 to-slate-900
     <section
       id="schedule"
-      className="w-full py-24 md:py-32 px-4 relative z-10 bg-linear-to-b from-slate-900 via-slate-950 to-slate-900"
+      className="w-full py-24 md:py-32 px-4 relative z-10 "
     >
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}

@@ -41,7 +41,7 @@ export default function Footer() {
         {/* Developer Info */}
         <div className="flex flex-col items-center">
           <p className="text-gray-400 text-xs md:text-sm font-medium">
-            Designed & Developed by @ <a href="https://www.linkedin.com/in/khandakersaminyeasar/" target="_blank" className="text-blue-200 ">Khandaker Samin Yeasar</a>
+            Design & Developed by @ <a href="https://www.linkedin.com/in/khandakersaminyeasar/" target="_blank" className="text-blue-200 ">Khandaker Samin Yeasar</a>
           </p>
         </div>
       </div>

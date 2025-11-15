@@ -28,11 +28,11 @@ export default function Navbar() {
      const closeResults = () => setIsResultsOpen(false);
 
      const navLinks = [
-          { label: 'About', href: '#about' },
           { label: 'Events', href: '#events' },
           { label: 'Schedule', href: '#schedule' },
-          { label: 'Previous Summits', href: '#previous' },
+          { label: 'Previous Summits', href: '#previous-summits' },
           { label: 'Results', href: '#results', action: openResults },
+          // { label: 'About', href: '#about' },
      ];
 
      const handleSmoothScroll = (e, link) => {

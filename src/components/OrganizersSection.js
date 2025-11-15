@@ -1,22 +1,30 @@
 "use client";
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState, useRef } from 'react';
+import Image from "next/image";
 
 export default function OrganizersSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const scrollContainer = useRef(null);
 
   const organizers = [
-    { id: 1, name: 'SWE', logo: '🏢' },
-    { id: 2, name: 'Data Science Lab', logo: '🧪' },
+    { id: 1, name: '', img: '/5.png' },
+    { id: 2, name: '', img: '/9.png' },
   ];
 
-
+  // ✅ FIXED — UNIQUE IDs FOR ALL
   const mediaPartners = [
-    { id: 1, name: 'Somkalol', logo: '📰' },
-    { id: 2, name: 'The Daily Star', logo: '📄' },
-    { id: 3, name: 'Dhaka Tribune', logo: '🗞️' },
-    { id: 4, name: 'Business Standard', logo: '📈' },
+    { id: 1, name: '', img: '/1.png' },
+    { id: 2, name: '', img: '/2.png' },
+    { id: 3, name: '', img: '/3.png' },
+    { id: 4, name: '', img: '/4.png' },
+    { id: 5, name: '', img: '/6.png' },
+    { id: 6, name: '', img: '/7.png' },
+    { id: 7, name: '', img: '/8.png' },
+    { id: 8, name: '', img: '/10.png' },
+    { id: 9, name: '', img: '/11.png' },
+    { id: 10, name: '', img: '/12.png' },
+    { id: 11, name: '', img: '/13.png' },
   ];
 
   const scroll = (direction) => {
@@ -31,11 +39,11 @@ export default function OrganizersSection() {
   };
 
   return (
-    <section className="w-full py-24 md:py-32 px-4 relative z-10  bg-linear-to-b from-slate-950 via-slate-900 to-slate-950">
+    <section className="w-full py-24 md:py-32 px-4 relative z-10 bg-linear-to-b from-slate-950 via-slate-900 to-slate-950">
       <div className="max-w-7xl mx-auto">
+
         {/* Organizers Section */}
         <div className="mb-24">
-          {/* Section Header */}
           <div className="text-center mb-16">
             <div className="inline-block mb-6">
               <div className="relative">
@@ -52,11 +60,17 @@ export default function OrganizersSection() {
             {organizers.map((org) => (
               <div
                 key={org.id}
-                className="group relative rounded-2xl border border-cyan-500/30 bg-linear-to-br from-slate-800/40 to-slate-900/40 backdrop-blur-xl p-8 overflow-hidden transition-all duration-300 hover:border-cyan-500/60 hover:shadow-lg hover:shadow-cyan-500/20"
+                className="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:border-cyan-500/60 hover:shadow-lg hover:shadow-cyan-500/20"
               >
                 <div className="absolute inset-0 bg-linear-to-br from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative text-center">
-                  <div className="text-6xl mb-4">{org.logo}</div>
+                  <Image
+                    src={org.img}
+                    alt={org.name}
+                    width={200}
+                    height={200}
+                    className="mx-auto object-contain"
+                  />
                   <p className="text-gray-300 font-semibold">{org.name}</p>
                 </div>
               </div>
@@ -64,10 +78,9 @@ export default function OrganizersSection() {
           </div>
         </div>
 
-
         {/* Media Partners Section */}
         <div>
-          {/* Section Header */}
+
           <div className="text-center mb-16">
             <div className="inline-block mb-6">
               <div className="relative">
@@ -84,17 +97,24 @@ export default function OrganizersSection() {
             {mediaPartners.map((media) => (
               <div
                 key={media.id}
-                className="group relative rounded-2xl border border-cyan-500/30 bg-linear-to-br from-slate-800/40 to-slate-900/40 backdrop-blur-xl p-6 overflow-hidden transition-all duration-300 hover:border-cyan-500/60 hover:shadow-lg hover:shadow-cyan-500/20"
+                className="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:border-cyan-500/60 hover:shadow-lg hover:shadow-cyan-500/20"
               >
                 <div className="absolute inset-0 bg-linear-to-br from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative text-center">
-                  <div className="text-4xl mb-2">{media.logo}</div>
+                  <Image
+                    src={media.img}
+                    alt={media.name}
+                    width={200}
+                    height={200}
+                    className="mx-auto mb-2 object-contain"
+                  />
                   <p className="text-gray-300 font-semibold text-xs md:text-sm">{media.name}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
+
       </div>
     </section>
   );

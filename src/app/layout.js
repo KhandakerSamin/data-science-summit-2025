@@ -14,11 +14,16 @@ export const metadata = {
   title: "5th Data Science Summit 2025",
   description:
     "Join us for the 5th Data Science Summit 2025 at Daffodil Smart City, Birulai, Savar, Dhaka. Explore the latest in AI and data science with industry experts and enthusiasts.",
+
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+            <head>
+        {/* Favicon */}
+        <link rel="icon" href="/image.png" type="image/png" />
+      </head>
       <body
         className={`${poppins.variable} antialiased min-h-screen w-full bg-[#020617] relative`}
         style={{
