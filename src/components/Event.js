@@ -16,7 +16,7 @@ export default function EventsSection() {
       location: 'Daffodil Smart City, Birulia, Dhaka-1216',
       tags: ['ML / AI', 'Deep Learning','Big Data', 'AI Ethics'],
       time: '09:00 AM - 05:00 PM',
-      registerLink: '#',
+      registerLink: 'https://forms.gle/dummyDataHackathon2025',
       presentedBy: 'Data Solution-360',
       event: '5th National Data Science Summit 2025',
       hostedBy: 'Data Science Lab and Department of Software Engineering',
@@ -44,7 +44,7 @@ export default function EventsSection() {
       location: 'Daffodil Smart City, Birulia, Dhaka-1216',
       tags: ['Innovation', 'Tech Projects', 'Prototyping', 'Showcase'],
       time: '09:00 AM - 05:00 PM',
-      registerLink: '#',
+      registerLink: 'https://forms.gle/dummyProjectCompetition2025',
       presentedBy: 'Data Science Lab',
       event: '5th National Data Science Summit 2025',
       hostedBy: 'Data Science Lab and Department of Software Engineering',
@@ -72,7 +72,7 @@ export default function EventsSection() {
       location: 'Daffodil Smart City, Birulia, Dhaka-1216',
       tags: ['Creativity', 'Prompt Engineering', 'Writing', 'Inovation'],
       time: '2:30 PM - 3:30 PM',
-      registerLink: '#',
+      registerLink: 'https://forms.gle/dummyPromptcraftChallenge2025',
       presentedBy: 'Data Science Lab',
       event: '5th National Data Science Summit 2025',
       hostedBy: 'Data Science Lab and Department of Software Engineering',
@@ -102,7 +102,7 @@ export default function EventsSection() {
       location: 'Daffodil Smart City, Birulia, Dhaka-1216',
       tags: ['Skill Development', 'Practical Learning', 'Interactive', 'Hands-On'],
       time: '09:00 AM - 05:00 PM',
-      registerLink: '#',
+      registerLink: 'https://forms.gle/dummyHandsOnWorkshop2025',
       presentedBy: 'Data Science Lab',
       event: '5th National Data Science Summit 2025',
       hostedBy: 'Data Science Lab and Department of Software Engineering',
@@ -126,7 +126,7 @@ export default function EventsSection() {
       location: 'Daffodil Smart City, Birulia, Dhaka-1216',
       tags: ['Creative Ideas', 'Poster Session', 'Inspiration', 'Knowledge Sharing'],
       time: '09:00 AM - 05:00 PM',
-      registerLink: '#',
+      registerLink: 'https://forms.gle/dummyIdeaPosterPresentation2025',
       presentedBy: 'Data Science Lab',
       event: '5th National Data Science Summit 2025',
       hostedBy: 'Data Science Lab and Department of Software Engineering',
@@ -242,9 +242,14 @@ export default function EventsSection() {
 
                   {/* Buttons - Pushed to Bottom */}
                   <div className="flex gap-3 mt-auto pt-6 border-t border-gray-700/30">
-                    <button className="flex-1 bg-linear-to-r from-cyan-500 to-blue-600 text-white px-4 py-2.5 font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 text-xs md:text-sm shadow-lg shadow-cyan-500/20">
+                    <a 
+                      href={event.registerLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 bg-linear-to-r from-cyan-500 to-blue-600 text-white px-4 py-2.5 font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 text-xs md:text-sm shadow-lg shadow-cyan-500/20 text-center"
+                    >
                       Register Now
-                    </button>
+                    </a>
                     <button
                       onClick={() => setSelectedEvent(event)}
                       className="flex-1 border border-cyan-500/40 text-cyan-300 px-4 py-2.5 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-xs md:text-sm"
@@ -362,9 +367,14 @@ export default function EventsSection() {
 
               {/* CTA Buttons */}
               <div className="flex gap-3">
-                <button className="flex-1 bg-linear-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-lg shadow-cyan-500/20">
+                <a
+                  href={selectedEvent.registerLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 bg-linear-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-lg shadow-cyan-500/20 text-center"
+                >
                   Register Now
-                </button>
+                </a>
                 <button
                   onClick={() => setSelectedEvent(null)}
                   className="flex-1 border border-cyan-500/40 text-cyan-300 px-6 py-3 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
