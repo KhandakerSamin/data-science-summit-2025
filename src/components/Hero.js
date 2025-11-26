@@ -52,7 +52,7 @@ export default function Hero() {
 
     // Calculate immediately on mount
     calculateTimeLeft();
-    
+
     // Update every second
     const timer = setInterval(calculateTimeLeft, 1000);
 
@@ -68,14 +68,14 @@ export default function Hero() {
             AI in Entrepreneurship
           </h3>
           <h1 className="text-4xl py-3 md:py-0 md:text-5xl lg:text-7xl font-bold text-white mb-2 md:mb-4 leading-tight">
-            5th<br className='block md:hidden'/> Data Science <br className='block md:hidden'/> Summit
+            5th<br className='block md:hidden' />National Data Science <br className='block md:hidden' /> Summit
           </h1>
           <p className="text-base md:text-lg text-gray-300 font-semibold mt-3 md:mt-4">
             Get Ready to Show Your Data Skills
           </p>
         </div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-6 mb-10 md:mb-14 text-gray-300 text-sm md:text-base">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-6 mb-10 md:mb-14 text-gray-300 text-sm md:text-base">
           <div className="flex items-center gap-2">
             <svg className="w-5 h-5 text-cyan-400" fill="currentColor" viewBox="0 0 20 20">
               <path d="M6 2a1 1 0 011-1h6a1 1 0 011 1v2h4a2 2 0 012 2v10a2 2 0 01-2 2H2a2 2 0 01-2-2V6a2 2 0 012-2h4V2z" />
@@ -109,9 +109,9 @@ export default function Hero() {
         {/* Call to Action Button */}
         <div className="mt-8 md:mt-10">
           <Link href="#events">
-          <button className="bg-linear-to-r from-cyan-400 to-blue-500 text-white px-6 md:px-10 py-3 md:py-4 font-bold text-base md:text-lg rounded-lg hover:from-cyan-300 hover:to-blue-400 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-xl">
-            Register Now
-          </button>
+            <button className="bg-linear-to-r from-cyan-400 to-blue-500 text-white px-6 md:px-10 py-3 md:py-4 font-bold text-base md:text-lg rounded-lg hover:from-cyan-300 hover:to-blue-400 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-xl">
+              Register Now
+            </button>
           </Link>
         </div>
       </div>
