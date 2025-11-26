@@ -7,6 +7,22 @@ import Image from 'next/image';
 export default function EventsSection() {
   const [selectedEvent, setSelectedEvent] = useState(null);
 
+  // Helper function to get event page URL
+  const getEventPageUrl = (eventId) => {
+    switch (eventId) {
+      case 1:
+        return '/data-hackathon';
+      case 2:
+        return '/project-showcase';
+      case 3:
+        return '/promptcraft';
+      case 5:
+        return '/research-poster';
+      default:
+        return '#';
+    }
+  };
+
   const events = [
     {
       id: 1,
@@ -250,12 +266,21 @@ export default function EventsSection() {
                     >
                       Register Now
                     </a>
-                    <button
-                      onClick={() => setSelectedEvent(event)}
-                      className="flex-1 border border-cyan-500/40 text-cyan-300 px-4 py-2.5 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-xs md:text-sm"
-                    >
-                      Learn More
-                    </button>
+                    {event.id === 4 ? (
+                      <button
+                        onClick={() => setSelectedEvent(event)}
+                        className="flex-1 border border-cyan-500/40 text-cyan-300 px-4 py-2.5 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-xs md:text-sm"
+                      >
+                        Learn More
+                      </button>
+                    ) : (
+                      <a
+                        href={getEventPageUrl(event.id)}
+                        className="flex-1 border border-cyan-500/40 text-cyan-300 px-4 py-2.5 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-xs md:text-sm text-center"
+                      >
+                        Learn More
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
@@ -264,8 +289,8 @@ export default function EventsSection() {
         </div>
       </section>
 
-      {/* Modal */}
-      {selectedEvent && (
+      {/* Modal - Only for Hands-On Workshop */}
+      {selectedEvent && selectedEvent.id === 4 && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm ">
           <div className="relative w-full max-w-2xl max-h-[90vh] bg-linear-to-br from-slate-800 to-slate-900 rounded-lg  border border-cyan-500/30 shadow-2xl shadow-cyan-500/20 overflow-y-scroll no-scrollbar">
             {/* Close Button */}
