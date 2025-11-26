@@ -43,7 +43,7 @@ export default function ResearchPosterPage() {
         }
       `}</style>
 
-            <div className="bg-slate-900 text-white min-h-screen font-sans scroll-smooth">
+            <div className="bg-slate-900 text-white min-h-screen font-sans scroll-smooth  py-22">
 
                 <div className="max-w-6xl mx-auto p-4 sm:p-8">
 

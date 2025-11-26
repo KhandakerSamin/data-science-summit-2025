@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function ProjectShowcasePage() {
     return (
         <div className="bg-slate-950 text-gray-100 min-h-screen">
-            <div className="max-w-7xl mx-auto px-4 py-12">
+            <div className="max-w-7xl mx-auto px-4 py-18">
                 {/* Header Section */}
                 <header className="text-center mb-16 pt-4">
                     <h1 className="text-6xl font-extrabold bg-linear-to-r from-cyan-400 via-sky-400 to-emerald-400 bg-clip-text text-transparent mb-4 sm:text-7xl lg:text-8xl animate-pulse">
