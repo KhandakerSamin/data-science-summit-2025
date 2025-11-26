@@ -24,27 +24,27 @@ const guests = [
         organization: "Daffodil International University",
         category: "chief",
     },
-    {
-        name: "Professor Dr. Syed Akhter Hossain",
-        img: "/guests/dean.jpg",
-        designation: "Dean and Professor of FSIT",
-        organization: "Daffodil International University",
-        category: "special",
-    },
+    // {
+    //     name: "Professor Dr. Syed Akhter Hossain",
+    //     img: "/guests/dean.jpg",
+    //     designation: "Dean and Professor of FSIT",
+    //     organization: "Daffodil International University",
+    //     category: "special",
+    // },
     {
         name: "Dr. Imran Mahmud",
-        img: "/guests/dept head.jpeg",
+        img: "/guests/head.png",
         designation: "Head of Software Engineering Department",
         organization: "Daffodil International University",
         category: "special",
     },
-    {
-        name: "Dr. Mohammad NuruzZaman",
-        img: "/guests/ceosir.jpg",
-        designation: "Group CEO",
-        organization: "Daffodil Family",
-        category: "special",
-    }
+    // {
+    //     name: "Dr. Mohammad NuruzZaman",
+    //     img: "/guests/ceosir.jpg",
+    //     designation: "Group CEO",
+    //     organization: "Daffodil Family",
+    //     category: "special",
+    // }
 ];
 
 const GuestCard = ({ guest }) => {
