@@ -1,4 +1,5 @@
 import EventsSection from '@/components/Event';
+import GuestList from '@/components/GuestList';
 import Hero from '@/components/Hero';
 import OrganizersSection from '@/components/OrganizersSection';
 import PreviousSummitsSection from '@/components/PreviousSummitsSection';
@@ -12,6 +13,7 @@ const page = () => {
       <Hero />
       <EventsSection />
       <ScheduleSection />
+      <GuestList />
       <VenueSection />
       <PreviousSummitsSection />
       <OrganizersSection />
