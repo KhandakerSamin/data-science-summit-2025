@@ -51,20 +51,41 @@ const GuestCard = ({ guest }) => {
     const { name, img, designation, organization } = guest;
 
     return (
-        <div className="h-94 w-80 rounded-lg bg-white p-6 text-center shadow-md">
-            <div className="mb-4 flex justify-center">
-                <Image
-                    src={img}
-                    width={330}
-                    height={350}
-                    alt={name}
-                    className="object-fit h-64 w-64 rounded-sm"
-                />
+        <div className="group relative w-80 rounded-2xl border border-gray-700/50 bg-linear-to-br from-slate-800/40 to-slate-900/40 backdrop-blur-xl overflow-hidden transition-all duration-300 hover:border-cyan-500/50 flex flex-col">
+            {/* Background Effect */}
+            <div className="absolute inset-0 bg-linear-to-br from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+            {/* Image Section */}
+            <div className="relative p-6 pb-4 flex justify-center">
+                <div className="relative">
+                    <Image
+                        src={img}
+                        width={280}
+                        height={280}
+                        alt={name}
+                        className="w-56 h-56 object-cover rounded-xl border-2 border-gray-700/30 group-hover:border-cyan-500/50 transition-all duration-300"
+                    />
+                </div>
             </div>
-            <div>
-                <h3 className="text-lg font-semibold text-gray-800">{name}</h3>
-                <p className="text-sm text-gray-600">{designation}</p>
-                <p className="text-sm italic text-gray-500">{organization}</p>
+
+            {/* Content Section - Fixed Height */}
+            <div className="relative p-6 pt-2 flex flex-col justify-between flex-1 text-center min-h-[140px]">
+                {/* Name - Fixed height with line clamping */}
+                <div className="mb-2">
+                    <h3 className="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors duration-300 line-clamp-2 leading-tight min-h-14">
+                        {name}
+                    </h3>
+                </div>
+
+                {/* Designation and Organization */}
+                <div className="space-y-1">
+                    <p className="text-sm text-cyan-400 font-medium leading-relaxed">
+                        {designation}
+                    </p>
+                    <p className="text-sm text-gray-300 italic">
+                        {organization}
+                    </p>
+                </div>
             </div>
         </div>
     );
@@ -77,42 +98,80 @@ const GuestList = () => {
     // const regularGuests = guests.filter((guest) => guest.category === "guest");
 
     return (
-        <div className="container mx-auto flex flex-col items-center justify-center p-4">
-            <div className="inline-block mb-6">
-                <div className="relative">
-                    <div className="absolute -inset-2 bg-linear-to-r from-purple-600 via-blue-600 to-cyan-600 rounded-lg blur-xl opacity-30"></div>
-                    <h2 className="relative text-5xl md:text-6xl lg:text-7xl font-bold text-white">
-                        Guests
-                    </h2>
+        <section
+            id="guests"
+            className="w-full py-24 md:py-32 px-4 relative z-10 bg-linear-to-b from-slate-950 via-slate-900 to-slate-950"
+        >
+            <div className="max-w-7xl mx-auto">
+                {/* Main Title */}
+                <div className="text-center mb-20 md:mb-24">
+                    <div className="inline-block mb-6">
+                        <div className="relative">
+                            <div className="absolute -inset-2 bg-linear-to-r from-purple-600 via-blue-600 to-cyan-600 rounded-lg blur-xl opacity-30"></div>
+                            <h2 className="relative text-5xl md:text-6xl lg:text-7xl font-bold text-white">
+                                Guests
+                            </h2>
+                        </div>
+                    </div>
+                    <p className="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-light">
+                        Meet our distinguished guests and speakers who will share their expertise and insights
+                    </p>
                 </div>
-            </div>
-            <h2 className="mb-4 text-2xl font-bold">Honour of Guest</h2>
-            <div className="mb-3 flex justify-center gap-4">
-                {chairman.map((guest) => (
-                    <GuestCard key={guest.name} guest={guest} />
-                ))}
-            </div>
-            <h2 className="mb-4 text-2xl font-bold">Chief Guest</h2>
-            <div className="flex flex-wrap gap-4">
-                {chiefGuests.map((guest) => (
-                    <GuestCard key={guest.name} guest={guest} />
-                ))}
-            </div>
 
-            <h2 className="mb-4 mt-8 text-2xl font-bold">Special Guests</h2>
-            <div className="flex flex-wrap justify-center gap-8">
-                {specialGuests.map((guest) => (
-                    <GuestCard key={guest.name} guest={guest} />
-                ))}
-            </div>
+                {/* Chairman Section */}
+                {chairman.length > 0 && (
+                    <div className="mb-16">
+                        <h3 className="text-3xl md:text-4xl font-bold text-center mb-8 bg-linear-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                            Honour of Guest
+                        </h3>
+                        <div className="flex justify-center gap-8">
+                            {chairman.map((guest) => (
+                                <GuestCard key={guest.name} guest={guest} />
+                            ))}
+                        </div>
+                    </div>
+                )}
 
-            {/* <h2 className="mb-4 mt-8 text-2xl font-bold">Guests</h2>
-      <div className="flex flex-wrap gap-4">
-        {regularGuests.map((guest) => (
-          <GuestCard key={guest.name} guest={guest} />
-        ))}
-      </div> */}
-        </div>
+                {/* Chief Guests Section */}
+                {chiefGuests.length > 0 && (
+                    <div className="mb-16">
+                        <h3 className="text-3xl md:text-4xl font-bold text-center mb-8 bg-linear-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                            Chief Guests
+                        </h3>
+                        <div className="flex flex-wrap justify-center gap-8">
+                            {chiefGuests.map((guest) => (
+                                <GuestCard key={guest.name} guest={guest} />
+                            ))}
+                        </div>
+                    </div>
+                )}
+
+                {/* Special Guests Section */}
+                {specialGuests.length > 0 && (
+                    <div className="mb-16">
+                        <h3 className="text-3xl md:text-4xl font-bold text-center mb-8 bg-linear-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                            Special Guests
+                        </h3>
+                        <div className="flex flex-wrap justify-center gap-8">
+                            {specialGuests.map((guest) => (
+                                <GuestCard key={guest.name} guest={guest} />
+                            ))}
+                        </div>
+                    </div>
+                )}
+
+                {/* <div className="mb-16">
+                    <h3 className="text-3xl md:text-4xl font-bold text-center mb-8 bg-linear-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                        Guests
+                    </h3>
+                    <div className="flex flex-wrap justify-center gap-8">
+                        {regularGuests.map((guest) => (
+                            <GuestCard key={guest.name} guest={guest} />
+                        ))}
+                    </div>
+                </div> */}
+            </div>
+        </section>
     );
 };
 
