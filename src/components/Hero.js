@@ -68,7 +68,7 @@ export default function Hero() {
             AI in Entrepreneurship
           </h3>
           <h1 className="text-4xl py-3 md:py-0 md:text-5xl lg:text-7xl font-bold text-white mb-2 md:mb-4 leading-tight">
-            5th<br className='block md:hidden' />National Data Science <br className='block md:hidden' /> Summit
+            5th<br className='block md:hidden' /> National Data Science <br className='block md:hidden' /> Summit
           </h1>
           <p className="text-base md:text-lg text-gray-300 font-semibold mt-3 md:mt-4">
             Get Ready to Show Your Data Skills
