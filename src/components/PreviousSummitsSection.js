@@ -48,7 +48,7 @@ export default function PreviousSummitsSection() {
             date: '11th December',
             description: 'Successfully transitioned to hybrid model, reaching a global audience with cutting-edge data science topics.',
             stats: { participants: '500+', speakers: '35', sessions: '16' },
-            images: ['P10.jpg', 'P11.jpg', 'P12.jpg']
+            images: ['P10.JPG', 'P11.JPG', 'P12.JPG']
         },
     ];
 
