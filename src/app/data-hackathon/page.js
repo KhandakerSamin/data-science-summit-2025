@@ -185,7 +185,7 @@ export default function DataHackathonPage() {
                             <p className="text-gray-300 mb-4">University, college, and school students with valid student ID required</p>
 
                             <h4 className="text-lg font-bold text-cyan-400 mb-3">Team Size</h4>
-                            <p className="text-gray-300 mb-4">Up to 2 members per team</p>
+                            <p className="text-gray-300 mb-4">Team of 2 members</p>
                         </div>
                         <div>
                             <h4 className="text-lg font-bold text-cyan-400 mb-3">What You&apos;ll Get</h4>

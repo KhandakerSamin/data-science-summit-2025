@@ -114,7 +114,7 @@ export default function ProjectShowcasePage() {
                                     <span className="font-bold mr-2 text-purple-400">Location:</span> Daffodil Smart City, Dhaka
                                 </p>
                                 <p className="text-gray-300">
-                                    <span className="font-bold mr-2 text-purple-400">Eligibility:</span> School, College & University Students (Solo or Team Max 2)
+                                    <span className="font-bold mr-2 text-purple-400">Eligibility:</span> School, College & University Students (Solo or Team of 2 members)
                                 </p>
                             </div>
 
