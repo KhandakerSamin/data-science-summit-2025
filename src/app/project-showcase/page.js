@@ -101,7 +101,7 @@ export default function ProjectShowcasePage() {
                                 <h2 className="text-3xl font-bold text-purple-300">Project Showcase</h2>
                             </div>
 
-                            <p class="text-gray-300 mb-8 text-lg">Unleash innovative solutions in <em>AI-driven entrepreneurship</em> at Bangladesh’s largest data science event!</p>
+                            <p className="text-gray-300 mb-8 text-lg">Unleash innovative solutions in <em>AI-driven entrepreneurship</em> at Bangladesh’s largest data science event!</p>
 
                             <div class="space-y-4 mb-10 text-base border-l-4 border-purple-500 pl-4">
                                 <p className="text-gray-300">
