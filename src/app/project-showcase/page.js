@@ -123,22 +123,22 @@ export default function ProjectShowcasePage() {
                             <div className="space-y-3 mb-10">
                                 <div className="flex justify-between items-center p-3 bg-linear-to-r from-purple-900/50 to-purple-900/10 rounded-xl border border-purple-800">
                                     <span className="font-extrabold text-xl text-yellow-300">🏆 Champion</span>
-                                    <span className="font-bold text-yellow-300 text-2xl">5,000 BDT</span>
+                                    <span className="font-bold text-yellow-300 text-2xl">7,000 BDT</span>
                                 </div>
                                 <div className="flex justify-between items-center p-3 bg-purple-900/30 rounded-xl">
                                     <span className="text-purple-300 font-semibold">1st Runner-up</span>
-                                    <span className="text-gray-300">3,000 BDT</span>
+                                    <span className="text-gray-300">5,000 BDT</span>
                                 </div>
                                 <div className="flex justify-between items-center p-3 bg-purple-900/10 rounded-xl">
                                     <span className="text-purple-300 font-semibold">2nd Runner-up</span>
-                                    <span className="text-gray-300">2,000 BDT</span>
+                                    <span className="text-gray-300">3,000 BDT</span>
                                 </div>
                                 <p className="text-base text-gray-400 pt-3 text-center">✨ All Participants receive T-shirt, souvenirs & certificates.</p>
                             </div>
 
                             {/* Registration & Deadline */}
                             <h3 className="text-2xl font-semibold mb-5 text-purple-400 border-b border-gray-700 pb-3">🗓️ Deadline & Registration</h3>
-                            <p className="text-3xl font-extrabold text-red-500 mb-6 text-center tracking-wider">Deadline: Dec 4, 2025</p>
+                            <p className="text-3xl font-extrabold text-red-500 mb-6 text-center tracking-wider">Deadline: Dec 5, 2025</p>
                             <Link
                                 href="https://docs.google.com/forms/d/e/1FAIpQLSe7jPzg0uHjqGkNSl72LB5Jb4Vv_vtuVrKIZ490EH-HfocWxQ/viewform"
                                 target="_blank"

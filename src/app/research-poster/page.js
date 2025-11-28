@@ -92,7 +92,7 @@ export default function ResearchPosterPage() {
                             <div className="mt-8 text-center">
                                 <div className="text-xl font-bold text-red-400 mb-3 p-2 bg-red-900/20 border border-red-500/30 rounded-lg inline-block shadow-inner">
                                     <Timer className="w-5 h-5 inline-block mr-2" />
-                                    Submission Deadline: <span className="text-red-300">[Please insert the deadline here]</span>
+                                    Submission Deadline: <span className="text-red-300">December 5, 2025</span>
                                 </div>
                                 <a
                                     href="https://docs.google.com/forms/d/e/1FAIpQLScEKI1gO_r05nAkxmEYm7D6vLvjoPjMPVCzZrF8EaVahmuX0Q/viewform"

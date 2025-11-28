@@ -201,7 +201,18 @@ export default function PromptcraftPage() {
               <p className="font-bold text-xl text-white">🥉 3rd Place</p>
               <p className="text-lg text-yellow-500">2,000 BDT</p>
             </div>
+            <div className="bg-blue-800/40 p-4 rounded-lg border border-blue-800/50">
+              <span className="text-3xl text-blue-600 mb-1 block">🏅</span>
+              <p className="font-bold text-xl text-white">🥉 4th Place</p>
+              <p className="text-lg text-blue-500">1,000 BDT</p>
+            </div>
+            <div className="bg-green-800/40 p-4 rounded-lg border border-green-800/50">
+              <span className="text-3xl text-green-600 mb-1 block">🏅</span>
+              <p className="font-bold text-xl text-white">🥉 5th Place</p>
+              <p className="text-lg text-green-500">1,000 BDT</p>
+            </div>
           </div>
+
 
           <h3 className="text-xl font-bold text-white mb-2 flex items-center">
             <span className="text-xl mr-2 text-fuchsia-400">🎁</span>
