@@ -90,6 +90,27 @@ const guests = [
         organization: "Grameenphone Ltd",
         category: "speaker",
     },
+    {
+        name: "Abdullah Al Hasan",
+        img: "/guests/abdullah-al-hasan.png",
+        designation: "Founder & Chief Executive Officer",
+        organization: "Muslims Day",
+        category: "speaker"
+    },
+    {
+        name: "Sakhawat Hossain",
+        img: "/guests/sakhawat-hossain.png",
+        designation: "Senior Software Engineer",
+        organization: "Cefalo",
+        category: "speaker"
+    },
+    {
+        name: "Syed Refat Al Abrar",
+        img: "/guests/refat-al-abrar.png",
+        designation: "Staff Consultant",
+        organization: "Cefalo",
+        category: "speaker"
+    }
 
 
     // {
@@ -149,6 +170,7 @@ const GuestList = () => {
     const chairman = guests.filter((guest) => guest.category === "chairman");
     const chiefGuests = guests.filter((guest) => guest.category === "chief");
     const specialGuests = guests.filter((guest) => guest.category === "special");
+    const speakers = guests.filter((guest) => guest.category === "speaker");
     // const regularGuests = guests.filter((guest) => guest.category === "guest");
 
     return (
@@ -208,6 +230,18 @@ const GuestList = () => {
                         </h3>
                         <div className="flex flex-wrap justify-center gap-8">
                             {specialGuests.map((guest) => (
+                                <GuestCard key={guest.name} guest={guest} />
+                            ))}
+                        </div>
+                    </div>
+                )}
+                {speakers.length > 0 && (
+                    <div className="mb-16">
+                        <h3 className="text-3xl md:text-4xl font-bold text-center mb-8 bg-linear-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                            Keynote Speakers
+                        </h3>
+                        <div className="flex flex-wrap justify-center gap-8">
+                            {speakers.map((guest) => (
                                 <GuestCard key={guest.name} guest={guest} />
                             ))}
                         </div>
