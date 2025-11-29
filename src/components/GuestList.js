@@ -24,13 +24,21 @@ const guests = [
         organization: "Daffodil International University",
         category: "chief",
     },
-    // {
-    //     name: "Professor Dr. Syed Akhter Hossain",
-    //     img: "/guests/dean.jpg",
-    //     designation: "Dean and Professor of FSIT",
-    //     organization: "Daffodil International University",
-    //     category: "special",
-    // },
+    {
+        name: "Professor Dr. Md. Fokhray Hossain",
+        img: "/guests/dean.png",
+        designation: "Dean and Professor of FSIT",
+        organization: "Daffodil International University",
+        category: "special",
+    },
+    {
+        name: "Prof. Dr. Bimal Chandra Das",
+        img: "/guests/as-dean.png",
+        designation: "Associate Dean and Professor of FSIT",
+        organization: "Daffodil International University",
+        category: "special",
+    },
+
     {
         name: "Dr. Imran Mahmud",
         img: "/guests/head.png",
@@ -38,6 +46,52 @@ const guests = [
         organization: "Daffodil International University",
         category: "special",
     },
+    {
+        name: "Ms. Nusrat Jahan",
+        img: "/guests/nusrat.png",
+        designation: "Head of Information Technology Management (ITM) Department",
+        organization: "Daffodil International University",
+        category: "special",
+    },
+    {
+        name: "Dr. Md. Fazla Elahe",
+        img: "/guests/fazla-elahe.png",
+        designation: "Associate Head of Software Engineering Department",
+        organization: "Daffodil International University",
+        category: "special",
+    },
+    {
+        name: "Dr. Abdus Sattar",
+        img: "/guests/abdus-sattar.png",
+        designation: "Associate Professor & Director, M.Sc in CSE",
+        organization: "Daffodil International University",
+        category: "special",
+    },
+    {
+        name: "Mr. Md. Khaled Sohel",
+        img: "/guests/sohel.png",
+        designation: "Assistant Professor of Software Engineering Department",
+        organization: "Daffodil International University",
+        category: "special",
+    },
+    {
+        name: "Nuruzzaman Faruqui",
+        img: "/guests/nuruzzaman.png",
+        designation: "Assistant Professor of Software Engineering Department",
+        organization: "Daffodil International University",
+        category: "special",
+    },
+
+    // Keynote Speaker
+    {
+        name: "Sadman Araf",
+        img: "/guests/sadman-araf.png",
+        designation: "Data Scientist",
+        organization: "Grameenphone Ltd",
+        category: "speaker",
+    },
+
+
     // {
     //     name: "Dr. Mohammad NuruzZaman",
     //     img: "/guests/ceosir.jpg",
